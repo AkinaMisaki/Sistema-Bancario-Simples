@@ -28,6 +28,21 @@ while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         continue
 
+    if menu1==1:
+        menu2=int(input("Menu Cliente:\n 1.Consultar saldo\n 2.Depositar\n 3.Sacar\Pix\n 4.Simular Rendimento\n 5.Voltar ao menu principal"))
+
+        if menu2==1:
+            with open(file_path, 'rb') as cliente:
+                cliente1['saldo'] = pickle.load(cliente)
+                print(cliente1['saldo'])
+
+
+        input()
+        exit()
+
+
+    
+    
     if menu1 == 3: #encerra o programa
         exit()
     #if menu1 == 1:
