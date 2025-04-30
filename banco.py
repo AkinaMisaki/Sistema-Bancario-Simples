@@ -71,6 +71,13 @@ while True:
                 input("Pressione Enter para continuar...")
                 with open(file_path, 'wb') as gerente:
                     pickle.dump(cliente1, gerente)
+
+            if menu2 == 3:
+                with open(file_path, 'rb') as gerente:
+                    cliente1 = pickle.load(gerente)
+                print(cliente1)
+                input("Pressione Enter para continuar...")
+
                 
             if menu2 == 4:
                 break
