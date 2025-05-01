@@ -1,7 +1,7 @@
 import pickle
 import os
 
-#declaração das idclienteiaveis
+#declaração das variaveis
 usuario = 0 
 menu2 = 0 
 menu3 = 0 
