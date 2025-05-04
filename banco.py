@@ -181,7 +181,7 @@ while True:
                 idcliente = input("Insira o número da conta: ")
                 clientenom = "cliente" + str(idcliente) + ".pickle"
                 file_path = os.path.join(cliente_dir, clientenom)
-                try: 
+                try:                                        #Etapa de verificação de cliente existente ou não, caso não exista, permite criar um novo, caso exista, apenas renomeia
                     with open(file_path, 'rb') as gerente:
                         infoclient = pickle.load(gerente)
                     os.system('cls' if os.name == 'nt' else 'clear')
@@ -199,12 +199,12 @@ while True:
                     print("Cliente cadastrado com sucesso!")
                     input("Pressione Enter para continuar... ")
 
-            if menu2 == 2:
+            if menu2 == 2:                                  #Opção 2 selecionada do menu de gerente
                 os.system('cls' if os.name == 'nt' else 'clear')
                 idcliente = input("Insira o número da conta: ")
                 clientenom = "cliente" + str(idcliente) + ".pickle"
                 file_path = os.path.join(cliente_dir, clientenom)
-                try: 
+                try:                                        #Realiza a alteração do saldo do cliente
                     with open(file_path, 'rb') as gerente:
                         infoclient = pickle.load(gerente)
                     os.system('cls' if os.name == 'nt' else 'clear')
@@ -219,12 +219,12 @@ while True:
                     print("Cliente não encontrado. Cadastre-o com a opção 1.")
                     input("Pressione Enter para continuar...")
 
-            if menu2 == 3:
+            if menu2 == 3:                                  #Opção 3 selecionada do menu de gerente
                 os.system('cls' if os.name == 'nt' else 'clear')
                 idcliente = input("Insira o número da conta: ")
                 clientenom = "cliente" + str(idcliente) + ".pickle"
                 file_path = os.path.join(cliente_dir, clientenom)
-                try: 
+                try:                                        #Puxa as informações do cliente de um arquivo externo e imprime na tela
                     with open(file_path, 'rb') as gerente:
                         infoclient = pickle.load(gerente)
                     os.system('cls' if os.name == 'nt' else 'clear')
